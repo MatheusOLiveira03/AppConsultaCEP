@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity() {
             if (cep.length != 8) {
                 edtCep.error = "CEP inválido"
                 return@setOnClickListener
+
             }
             lifecycleScope.launch {
                 val endereco = ViaCepClient.instance.buscarEndereco(cep)
